@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReThink Waste - Helpline</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="complain.css">
+</head>
+
+<body class="flex flex-col min-h-screen text-gray-900" 
+      style="background-image: url('helpline bg.jpg'); 
+             background-size: cover; 
+             background-position: center; 
+             background-repeat: no-repeat; 
+             background-attachment: fixed;"> 
+    
+    <header>
+        <div class="header">
+            <div class="navbar">
+                <a class="nav-link" href="index.html">Home</a>
+                <a class="nav-link" href="Awareness.html">Awareness</a>
+                <a class="nav-link" href="#WasteTypes">Waste Types</a>
+                <a class="nav-link" href="helpline.html">Helpline</a>
+                <a class="nav-link" href="about-us.html">About</a>
+            </div>
+        </div>
+        <div class="Logo">
+            <img src="Logo.png" alt="Logo" height="115px">
+        </div>     
+        <div class="md:hidden">
+            <button class="text-gray-500 hover:text-green-600 focus:outline-none"><svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"/></svg></button>
+        </div>
+    </header>
+
+    <main class="max-w-xl mx-auto py-12 px-4 sm:px-6 lg:px-8 flex-grow">
+        
+        <div class="bg-gradient-to-br from-white/80 to-white/40 backdrop-blur-lg p-8 rounded-2xl shadow-2xl border border-white/50 border-t-8 border-t-green-600">
+            
+            <h1 class="text-4xl font-extrabold text-gray-900 mb-2">Helpline & Support</h1>
+            <p class="text-gray-800 font-medium mb-6">Get in touch for immediate assistance, inquiries, or reporting.</p>
+            
+            <div class="mb-8">
+                <label for="locationSelector" class="block text-sm font-bold text-gray-800">Select Your Location:</label>
+                <select id="locationSelector" name="location" class="mt-1 block w-full p-3 border border-gray-300 rounded-md focus:ring-green-500 focus:border-green-500 bg-white/80 backdrop-blur-sm">
+                    <option value="national">National Helplines</option>
+                    <option value="mumbai">Mumbai</option>
+                    <option value="delhi">Delhi</option>
+                    <option value="bangalore">Bengaluru (Bangalore)</option>
+                    <option value="chennai">Chennai</option>
+                    <option value="kolkata">Kolkata</option>
+                </select>
+            </div>
+
+            <div class="space-y-6">
+
+                <div class="flex items-center justify-between p-4 bg-white/60 rounded-lg border border-white/60 shadow-sm backdrop-blur-sm hover:bg-white/80 transition">
+                    <div>
+                        <h2 id="title-1" class="text-lg font-semibold text-gray-900">General Waste Inquiry</h2>
+                        <p id="desc-1" class="text-sm text-gray-700">For collection schedules & segregation rules</p>
+                    </div>
+                    <a id="link-1" href="tel:1969" class="flex-shrink-0 ml-4 px-4 py-2 bg-green-100 text-green-800 text-lg font-bold rounded-md hover:bg-green-200 transition border border-green-200">
+                        1969
+                    </a>
+                </div>
+
+                <div class="flex items-center justify-between p-4 bg-white/60 rounded-lg border border-white/60 shadow-sm backdrop-blur-sm hover:bg-white/80 transition">
+                    <div>
+                        <h2 id="title-2" class="text-lg font-semibold text-gray-900">Municipal Corporation</h2>
+                        <p id="desc-2" class="text-sm text-gray-700">For public area dumping & policy issues</p>
+                    </div>
+                    <a id="link-2" href="tel:1969" class="flex-shrink-0 ml-4 px-4 py-2 bg-green-100 text-green-800 text-lg font-bold rounded-md hover:bg-green-200 transition border border-green-200">
+                        1969
+                    </a>
+                </div>
+
+                <div class="flex items-center justify-between p-4 bg-white/60 rounded-lg border border-white/60 shadow-sm backdrop-blur-sm hover:bg-white/80 transition">
+                    <div>
+                        <h2 id="title-3" class="text-lg font-semibold text-gray-900">Hazardous Waste Disposal</h2>
+                        <p id="desc-3" class="text-sm text-gray-700">Batteries, e-waste, medical waste</p>
+                    </div>
+                    <a id="link-3" href="tel:01143102030" class="flex-shrink-0 ml-4 px-4 py-2 bg-green-100 text-green-800 text-lg font-bold rounded-md hover:bg-green-200 transition border border-green-200">
+                        (011) 43102030
+                    </a>
+                </div>
+
+                <div class="flex items-center justify-between p-4 bg-white/60 rounded-lg border border-white/60 shadow-sm backdrop-blur-sm hover:bg-white/80 transition">
+                    <div>
+                        <h2 id="title-4" class="text-lg font-semibold text-gray-900">Bulk Waste Pickup</h2>
+                        <p id="desc-4" class="text-sm text-gray-700">Furniture, debris (may require appointment)</p>
+                    </div>
+                    <a id="link-4" href="tel:1969" class="flex-shrink-0 ml-4 px-4 py-2 bg-green-100 text-green-800 text-lg font-bold rounded-md hover:bg-green-200 transition border border-green-200">
+                        1969
+                    </a>
+                </div>
+
+                <div class="flex items-center justify-between p-4 bg-white/60 rounded-lg border border-white/60 shadow-sm backdrop-blur-sm hover:bg-white/80 transition">
+                    <div>
+                        <h2 id="title-5" class="text-lg font-semibold text-gray-900">Animal Carcass Removal</h2>
+                        <p id="desc-5" class="text-sm text-gray-700">Public health & sanitation service</p>
+                    </div>
+                    <a id="link-5" href="tel:1969" class="flex-shrink-0 ml-4 px-4 py-2 bg-green-100 text-green-800 text-lg font-bold rounded-md hover:bg-green-200 transition border border-green-200">
+                        1969
+                    </a>
+                </div>
+
+                <div class="flex items-center justify-between p-4 bg-red-50/80 rounded-lg border border-red-200 shadow-sm backdrop-blur-sm">
+                    <div>
+                        <h2 class="text-lg font-semibold text-red-900">National Emergency Services</h2>
+                        <p class="text-sm text-red-700">Police, Fire, or Medical Emergency</p>
+                    </div>
+                    <a href="tel:112" class="flex-shrink-0 ml-4 px-4 py-2 bg-red-100 text-red-800 text-lg font-bold rounded-md hover:bg-red-200 transition border border-red-200">
+                        112
+                    </a>
+                </div>
+
+            </div>
+
+            <div class="mt-10 border-t border-gray-400/50 pt-8">
+                <h3 class="text-2xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h3>
+                <div class="space-y-4">
+                    <div>
+                        <h4 class="font-semibold text-gray-900">What do I do with e-waste (electronics)?</h4>
+                        <p class="text-gray-800">Please select your location above and call the "Hazardous Waste" number. Do not mix e-waste with household trash.</p>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold text-gray-900">My garbage wasn't collected today. What's the fastest way to report it?</h4>
+                        <p class="text-gray-800">The fastest way is to use our <a href="complain.html" class="text-green-700 hover:underline font-bold">Online Complaint Form</a>. You can also call the "General Inquiry" or "Municipal" number for your location.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="w-full" style="font-size: x-large; background-color: #111; color: white; text-align: center; padding: 15px;">
+        &#169; 2025 Waste Segregation Portal &#124; An SDG 11 Project
+    </footer>
+
+    <script>
+        const helplineData = {
+            'national': {
+                item1: { title: "National Sanitation Helpline", desc: "Swachhata (MoHUA)", number: "1969", tel: "tel:1969" },
+                item2: { title: "CPCB General Inquiry", desc: "Central Pollution Control Board", number: "(011) 43102030", tel: "tel:01143102030" },
+                item3: { title: "Hazardous Waste Info", desc: "CPCB Guidance", number: "(011) 43102030", tel: "tel:01143102030" },
+                item4: { title: "Bulk Waste (Municipal)", desc: "Contact local municipal body", number: "1969", tel: "tel:1969" },
+                item5: { title: "Animal Carcass (Municipal)", desc: "Contact local municipal body", number: "1969", tel: "tel:1969" }
+            },
+            'mumbai': {
+                item1: { title: "BMC Helpline", desc: "Brihanmumbai Municipal Corp.", number: "1916", tel: "tel:1916" },
+                item2: { title: "Solid Waste Management", desc: "BMC (Complaints)", number: "1916", tel: "tel:1916" },
+                item3: { title: "E-Waste Collection (BMC)", desc: "Contact local ward office", number: "1916", tel: "tel:1916" },
+                item4: { title: "Bulk Waste (Debris) Pickup", desc: "Call 1916 to schedule", number: "1916", tel: "tel:1916" },
+                item5: { title: "Animal Carcass Removal", desc: "Report via 1916", number: "1916", tel: "tel:1916" }
+            },
+            'delhi': {
+                item1: { title: "MCD Helpline", desc: "Municipal Corporation of Delhi", number: "155305", tel: "tel:155305" },
+                item2: { title: "Sanitation Complaints", desc: "MCD 311 App or Helpline", number: "155305", tel: "tel:155305" },
+                item3: { title: "Hazardous/E-Waste (DPCC)", desc: "Delhi Pollution Control", number: "(011) 23869383", tel: "tel:01123869383" },
+                item4: { title: "Bulk Waste (Malba) Removal", desc: "Report via 155305 or 311 App", number: "155305", tel: "tel:155305" },
+                item5: { title: "Animal Carcass Removal", desc: "Report via 155305", number: "155305", tel: "tel:155305" }
+            },
+            'bangalore': {
+                item1: { title: "BBMP Sahaya", desc: "Bruhat Bengaluru Mahanagara Palike", number: "1533", tel: "tel:1533" },
+                item2: { title: "Solid Waste Management", desc: "BBMP (Complaints)", number: "1533", tel: "tel:1533" },
+                item3: { title: "Hazardous/E-Waste (KSPCB)", desc: "Karnataka Pollution Control", number: "(080) 25589113", tel: "tel:08025589113" },
+                item4: { title: "Bulk Waste (Debris) Pickup", desc: "Report via 1533", number: "1533", tel: "tel:1533" },
+                item5: { title: "Animal Carcass Removal", desc: "Report via 1533", number: "1533", tel: "tel:1533" }
+            },
+            'chennai': {
+                item1: { title: "GCC Helpline", desc: "Greater Chennai Corporation", number: "1913", tel: "tel:1913" },
+                item2: { title: "Solid Waste (Namma Chennai)", desc: "GCC Complaints", number: "1913", tel: "tel:1913" },
+                item3: { title: "Hazardous Waste (TNPCB)", desc: "Tamil Nadu Pollution Control", number: "(044) 22200350", tel: "tel:04422200350" },
+                item4: { title: "Bulk Waste Pickup", desc: "Report via 1913", number: "1913", tel: "tel:1913" },
+                item5: { title: "Animal Carcass Removal", desc: "Report via 1913", number: "1913", tel: "tel:1913" }
+            },
+            'kolkata': {
+                item1: { title: "KMC Helpline", desc: "Kolkata Municipal Corporation", number: "155360", tel: "tel:155360" },
+                item2: { title: "Solid Waste Management", desc: "KMC (WhatsApp)", number: "8335988888", tel: "tel:8335988888" },
+                item3: { title: "Hazardous Waste (WBPCB)", desc: "West Bengal Pollution Control", number: "(033) 23358212", tel: "tel:03323358212" },
+                item4: { title: "Bulk Waste (Debris) Pickup", desc: "Report via 155360", number: "155360", tel: "tel:155360" },
+                item5: { title: "Animal Carcass Removal", desc: "Report via 155360", number: "155360", tel: "tel:155360" }
+            }
+        };
+
+        const locationSelector = document.getElementById('locationSelector');
+        
+        const elements = {
+            item1: { title: document.getElementById('title-1'), desc: document.getElementById('desc-1'), link: document.getElementById('link-1') },
+            item2: { title: document.getElementById('title-2'), desc: document.getElementById('desc-2'), link: document.getElementById('link-2') },
+            item3: { title: document.getElementById('title-3'), desc: document.getElementById('desc-3'), link: document.getElementById('link-3') },
+            item4: { title: document.getElementById('title-4'), desc: document.getElementById('desc-4'), link: document.getElementById('link-4') },
+            item5: { title: document.getElementById('title-5'), desc: document.getElementById('desc-5'), link: document.getElementById('link-5') }
+        };
+
+        function updateHelplines(location) {
+            const data = helplineData[location];
+            if (!data) return;
+
+            elements.item1.title.textContent = data.item1.title;
+            elements.item1.desc.textContent = data.item1.desc;
+            elements.item1.link.href = data.item1.tel;
+            elements.item1.link.textContent = data.item1.number;
+
+            elements.item2.title.textContent = data.item2.title;
+            elements.item2.desc.textContent = data.item2.desc;
+            elements.item2.link.href = data.item2.tel;
+            elements.item2.link.textContent = data.item2.number;
+
+            elements.item3.title.textContent = data.item3.title;
+            elements.item3.desc.textContent = data.item3.desc;
+            elements.item3.link.href = data.item3.tel;
+            elements.item3.link.textContent = data.item3.number;
+
+            elements.item4.title.textContent = data.item4.title;
+            elements.item4.desc.textContent = data.item4.desc;
+            elements.item4.link.href = data.item4.tel;
+            elements.item4.link.textContent = data.item4.number;
+
+            elements.item5.title.textContent = data.item5.title;
+            elements.item5.desc.textContent = data.item5.desc;
+            elements.item5.link.href = data.item5.tel;
+            elements.item5.link.textContent = data.item5.number;
+        }
+
+        locationSelector.addEventListener('change', (e) => {
+            updateHelplines(e.target.value);
+        });
+
+        window.addEventListener('load', () => {
+            updateHelplines('national');
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReThink Waste - Feedback</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="stylesheet" href="complain.css">
+
+    <style>
+        .rate {
+            float: left;
+            height: 46px;
+            padding: 0 10px;
+        }
+        .rate:not(:checked) > input {
+            position:absolute;
+            top:-9999px;
+        }
+        .rate:not(:checked) > label {
+            float:right;
+            width:1em;
+            overflow:hidden;
+            white-space:nowrap;
+            cursor:pointer;
+            font-size:30px;
+            color:#ccc;
+        }
+        .rate:not(:checked) > label:before {
+            content: '★ ';
+        }
+        .rate > input:checked ~ label {
+            color: #ffc700;    
+        }
+        .rate:not(:checked) > label:hover,
+        .rate:not(:checked) > label:hover ~ label {
+            color: #deb217;  
+        }
+        .rate > input:checked + label:hover,
+        .rate > input:checked + label:hover ~ label,
+        .rate > input:checked ~ label:hover,
+        .rate > input:checked ~ label:hover ~ label,
+        .rate > label:hover ~ input:checked ~ label {
+            color: #c59b08;
+        }
+    </style>
+</head>
+<body class="flex flex-col min-h-screen"> 
+    
+    <div class="header">
+        <div class="navbar">
+            <a class="nav-link" href="index.html">Home</a>
+            <a class="nav-link" href="Awareness.html">Awareness</a>
+            <a class="nav-link" href="#WasteTypes">Waste Types</a>
+            <a class="nav-link" href="helpline.html">Helpline</a>
+            <a class="nav-link" href="about-us.html">About</a>
+        </div>
+    </div>
+    
+    <div class="Logo">
+        <img src="Logo.png" alt="Logo" height="115px">
+    </div>
+        
+    <div class="md:hidden absolute top-5 right-5">
+        <button class="text-gray-500 hover:text-green-600 focus:outline-none">
+            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"/>
+            </svg>
+        </button>
+    </div>
+
+    <main class="max-w-xl mx-auto py-12 px-4 sm:px-6 lg:px-8 flex-grow mt-10">
+        <div class="bg-white p-8 rounded-xl shadow-2xl border-t-8 border-green-600">
+            <h1 class="text-4xl font-extrabold text-gray-900 mb-2">We Value Your Feedback</h1>
+            <p class="text-gray-600 mb-8">Help us improve our waste management services by rating your experience.</p>
+            
+            <form id="feedbackForm" action="#" method="POST" class="space-y-6">
+                
+                <div>
+                    <label for="name" class="block text-sm font-medium text-gray-700">Full Name</label>
+                    <input type="text" id="name" name="name" required placeholder="John Doe" class="mt-1 block w-full p-3 border border-gray-300 rounded-md focus:ring-green-500 focus:border-green-500">
+                </div>
+
+                <div>
+                    <label for="email" class="block text-sm font-medium text-gray-700">Email Address</label>
+                    <input type="email" id="email" name="email" required placeholder="john@example.com" class="mt-1 block w-full p-3 border border-gray-300 rounded-md focus:ring-green-500 focus:border-green-500">
+                </div>
+
+                <div>
+                    <label for="category" class="block text-sm font-medium text-gray-700">Feedback Category</label>
+                    <select id="category" name="category" required class="mt-1 block w-full p-3 border border-gray-300 rounded-md focus:ring-green-500 focus:border-green-500">
+                        <option value="">-- Select Category --</option>
+                        <option value="website">Website Experience</option>
+                        <option value="collection">Collection Service</option>
+                        <option value="staff">Staff Behavior</option>
+                        <option value="suggestion">General Suggestion</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-1">Rate Your Experience</label>
+                    <div class="rate">
+                        <input type="radio" id="star5" name="rate" value="5" />
+                        <label for="star5" title="text">5 stars</label>
+                        <input type="radio" id="star4" name="rate" value="4" />
+                        <label for="star4" title="text">4 stars</label>
+                        <input type="radio" id="star3" name="rate" value="3" />
+                        <label for="star3" title="text">3 stars</label>
+                        <input type="radio" id="star2" name="rate" value="2" />
+                        <label for="star2" title="text">2 stars</label>
+                        <input type="radio" id="star1" name="rate" value="1" />
+                        <label for="star1" title="text">1 star</label>
+                    </div>
+                    <div class="clear-both"></div> </div>
+
+                <div>
+                    <label for="comments" class="block text-sm font-medium text-gray-700">Comments / Suggestions</label>
+                    <textarea id="comments" name="comments" rows="4" required placeholder="Tell us what we can do better..." class="mt-1 block w-full p-3 border border-gray-300 rounded-md focus:ring-green-500 focus:border-green-500"></textarea>
+                </div>
+
+                <button type="submit" class="w-full py-3 px-4 border border-transparent rounded-md shadow-sm text-lg font-medium text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 transition duration-150">
+                    Submit Feedback
+                </button>
+                
+                <div id="messageBox" class="text-center p-3 text-sm hidden rounded-md"></div>
+            </form>
+        </div>
+    </main>
+
+    <footer class="w-full" style="font-size: x-large; background-color: #111; color: white; text-align: center; padding: 15px;">
+        &#169; 2025 Waste Segregation Portal &#124; An SDG 11 Project
+    </footer>
+
+    <script>
+        const form = document.getElementById('feedbackForm');
+        const msgBox = document.getElementById('messageBox');
+
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            // Check if a star rating is selected
+            const rating = document.querySelector('input[name="rate"]:checked');
+            if (!rating) {
+                msgBox.textContent = 'Please select a star rating.';
+                msgBox.classList.remove('hidden', 'bg-green-100', 'text-green-800');
+                msgBox.classList.add('bg-red-100', 'text-red-800', 'block');
+                return;
+            }
+
+            // Success Message
+            msgBox.textContent = 'Thank you! Your feedback has been submitted successfully.';
+            msgBox.classList.remove('hidden', 'bg-red-100', 'text-red-800');
+            msgBox.classList.add('bg-green-100', 'text-green-800', 'block');
+            
+            // Optional: Reset form after delay
+            setTimeout(() => {
+                form.reset();
+                msgBox.classList.add('hidden');
+            }, 3000);
+        });
+    </script>
+</body>
+</html>

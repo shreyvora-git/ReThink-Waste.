@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReThink Waste - Complaint</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+ 
+    <link rel="stylesheet" href="complain.css">
+
+</head>
+<body class="flex flex-col min-h-screen"> 
+    
+    
+            <div class="header">
+            <div class="navbar">
+            <a class="nav-link" href="Project-Shrey.html">Home</a>
+            <a class="nav-link" href="Awareness.html">Awareness</a>
+            <a class="nav-link" href="#WasteTypes">Waste Types</a>
+            <a class="nav-link" href="#Helpline">Helpline</a>
+            <a class="nav-link" href="#About">About</a>
+            </div>
+        </div>
+            <div class="Logo">
+            <img src="Logo.png" alt="Logo" height="115px">
+        </div>
+                
+                <div class="md:hidden">
+                    <button class="text-gray-500 hover:text-green-600 focus:outline-none"><svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"/></svg></button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+ 
+    <main class="max-w-xl mx-auto py-12 px-4 sm:px-6 lg:px-8 flex-grow">
+        <div class="bg-white p-8 rounded-xl shadow-2xl border-t-8 border-green-600">
+            <h1 class="text-4xl font-extrabold text-gray-900 mb-2">Register a Complaint</h1>
+            <p class="text-gray-600 mb-8">Report issues related to missed collection, segregation problems, or unauthorized dumping.</p>
+            
+            <form id="complaintForm" action="#" method="POST" class="space-y-6">
+                
+                <div>
+                    <label for="name" class="block text-sm font-medium text-gray-700">Full Name</label>
+                    <input type="text" id="name" name="name" required placeholder="John Doe" class="mt-1 block w-full p-3 border border-gray-300 rounded-md focus:ring-green-500 focus:border-green-500">
+                </div>
+
+                <div>
+                    <label for="type" class="block text-sm font-medium text-gray-700">Complaint Type</label>
+                    <select id="type" name="type" required class="mt-1 block w-full p-3 border border-gray-300 rounded-md focus:ring-green-500 focus:border-green-500">
+                        <option value="">-- Select Issue --</option>
+                        <option value="missed">Missed Collection</option>
+                        <option value="segregation">Improper Segregation/Collection</option>
+                        <option value="dumping">Unauthorized Waste Dumping</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="address" class="block text-sm font-medium text-gray-700">Location/Address</label>
+                    <input type="text" id="address" name="address" required placeholder="Street, Building Name, Landmark" class="mt-1 block w-full p-3 border border-gray-300 rounded-md focus:ring-green-500 focus:border-green-500">
+                </div>
+
+                <div>
+                    <label for="description" class="block text-sm font-medium text-gray-700">Detailed Description</label>
+                    <textarea id="description" name="description" rows="4" required placeholder="Describe the issue (date, time, exact location)" class="mt-1 block w-full p-3 border border-gray-300 rounded-md focus:ring-green-500 focus:border-green-500"></textarea>
+                </div>
+
+                <div>
+                    <label for="contact" class="block text-sm font-medium text-gray-700">Contact (Gmail or Phone)</label>
+                    <input type="text" id="contact" name="contact" required placeholder="example@gmail.com or 9876543210" class="mt-1 block w-full p-3 border border-gray-300 rounded-md focus:ring-green-500 focus:border-green-500">
+                    <p class="text-xs text-gray-500 mt-1">Must be a Gmail address or a 10-digit number.</p>
+                </div>
+
+                <button type="submit" class="w-full py-3 px-4 border border-transparent rounded-md shadow-sm text-lg font-medium text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 transition duration-150">
+                    Submit Complaint
+                </button>
+                
+                <div id="messageBox" class="text-center p-3 text-sm hidden rounded-md"></div>
+            </form>
+        </div>
+    </main>
+
+    
+    <footer class="w-full" style="font-size: x-large; background-color: #111; color: white; text-align: center; padding: 15px;">
+        &#169; 2025 Waste Segregation Portal &#124; An SDG 11 Project
+    </footer>
+
+
+    <script>
+        const form = document.getElementById('complaintForm');
+        const msgBox = document.getElementById('messageBox');
+        const contactInput = document.getElementById('contact');
+
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            const contactValue = contactInput.value.trim();
+            
+            
+            const phoneRegex = /^\d{10}$/;
+           
+            const gmailRegex = /^[a-zA-Z0-9._%+-]+@gmail\.com$/;
+
+           
+            if (!phoneRegex.test(contactValue) && !gmailRegex.test(contactValue)) {
+            
+                msgBox.textContent = 'Error: Contact must be a valid 10-digit number or a @gmail.com address.';
+                msgBox.classList.remove('hidden', 'bg-green-100', 'text-green-800');
+                msgBox.classList.add('bg-red-100', 'text-red-800', 'block'); 
+                return; 
+            }
+
+            
+            msgBox.textContent = 'Complaint registered successfully! Reference ID: 7421. We will investigate this issue shortly.';
+            msgBox.classList.remove('hidden', 'bg-red-100', 'text-red-800');
+            msgBox.classList.add('bg-green-100', 'text-green-800', 'block');
+            form.reset();
+        });
+    </script>
+</body>
+</html>
