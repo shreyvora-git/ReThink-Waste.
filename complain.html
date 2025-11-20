@@ -6,7 +6,6 @@
     <title>ReThink Waste - Complaint</title>
     <script src="https://cdn.tailwindcss.com"></script>
     
- 
     <link rel="stylesheet" href="complain.css">
 
 </head>
@@ -18,33 +17,33 @@ style="background-image: url('helpline bg.jpg');
              background-attachment: fixed;"> 
     
     
-            <div class="header">
-            <div class="navbar">
-            <a class="nav-link" href="index.html">Home</a>
-            <a class="nav-link" href="Awareness.html">Awareness</a>
-            <a class="nav-link" href="#WasteTypes">Waste Types</a>
-            <a class="nav-link" href="helpline.html">Helpline</a>
-            <a class="nav-link" href="about-us.html">About</a>
-            </div>
-        </div>
-            <div class="Logo">
-            <img src="Logo.png" alt="Logo" height="115px">
-        </div>
-                
-                <div class="md:hidden">
-                    <button class="text-gray-500 hover:text-green-600 focus:outline-none"><svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"/></svg></button>
+                <div class="header">
+                <div class="navbar">
+                <a class="nav-link" href="index.html">Home</a>
+                <a class="nav-link" href="Awareness.html">Awareness</a>
+                <a class="nav-link" href="#WasteTypes">Waste Types</a>
+                <a class="nav-link" href="helpline.html">Helpline</a>
+                <a class="nav-link" href="about-us.html">About</a>
                 </div>
             </div>
-        </div>
+                <div class="Logo">
+                <img src="Logo.png" alt="Logo" height="115px">
+            </div>
+                        
+                    <div class="md:hidden">
+                        <button class="text-gray-500 hover:text-green-600 focus:outline-none"><svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"/></svg></button>
+                    </div>
+                </div>
+            </div>
     </header>
 
- 
+    
     <main class="max-w-xl mx-auto py-12 px-4 sm:px-6 lg:px-8 flex-grow">
         <div class="bg-white p-8 rounded-xl shadow-2xl border-t-8 border-green-600">
             <center><h1 class="text-4xl font-extrabold text-gray-900 -b-2">Facing A Problem? </h1></center><br>
             <h2 class="text-gray-600 mb-8" > Submit Your Complaint And We'll Take Care Of It.</h2>
             
-            <form id="complaintForm" action="#" method="POST" class="space-y-6">
+            <form id="complaintForm" action="#" method="POST" class="space-y-6" enctype="multipart/form-data">
                 
                 <div>
                     <label for="name" class="block text-sm font-medium text-gray-700">Full Name</label>
@@ -73,6 +72,18 @@ style="background-image: url('helpline bg.jpg');
                 </div>
 
                 <div>
+                    <label for="garbage_photo" class="block text-sm font-medium text-gray-700" >
+                        Upload Photo of Garbage 
+                    </label>
+                    <input type="file" 
+                            required
+                           id="garbage_photo" 
+                           name="garbage_photo" 
+                           accept="image/jpeg, image/png, image/webp" 
+                           class="mt-1 block w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-green-50 file:text-green-700 hover:file:bg-green-100">
+                    <p class="text-xs text-gray-500 mt-1">Accepted formats: JPG, PNG, WEBP. Max file size recommended.</p>
+                </div>
+                <div>
                     <label for="contact" class="block text-sm font-medium text-gray-700">Contact (Gmail or Phone)</label>
                     <input type="text" id="contact" name="contact" required placeholder="example@gmail.com or 9876543210" class="mt-1 block w-full p-3 border border-gray-300 rounded-md focus:ring-green-500 focus:border-green-500">
                     <p class="text-xs text-gray-500 mt-1">Must be a Gmail address or a 10-digit number.</p>
@@ -89,7 +100,7 @@ style="background-image: url('helpline bg.jpg');
 
     
     <footer class="w-full" style="font-size: x-large; background-color: #111; color: white; text-align: center; padding: 15px;">
-        &#169; 2025 Waste Segregation Portal &#124; An SDG 11 Project
+        &#169; 2025 Waste Segregation Portal | An SDG 11 Project
     </footer>
 
 
@@ -117,7 +128,7 @@ style="background-image: url('helpline bg.jpg');
                 return; 
             }
 
-            
+        
             msgBox.textContent = 'Complaint registered successfully! Reference ID: 7421. We will investigate this issue shortly.';
             msgBox.classList.remove('hidden', 'bg-red-100', 'text-red-800');
             msgBox.classList.add('bg-green-100', 'text-green-800', 'block');
