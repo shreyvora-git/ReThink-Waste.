@@ -81,3 +81,7 @@ img:hover{
     transform: scale(1.03);
 
 }
+.text-4xl font-extrabold text-gray-900-mb-2{
+    font-weight: bolder;
+    
+}
