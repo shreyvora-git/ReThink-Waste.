@@ -116,14 +116,14 @@ p {
     display: flex;
     height: 0px;
 }
-/* img {
+img {
     position: absolute;
     top: 17.5px;
     left: 200px;
     scale: 1.6;
     transition: transform 0.3s ease;
     z-index: 9999; 
-} */
+}
 img:hover {
     transform: scale(1.1);
 }
@@ -387,6 +387,7 @@ footer {
     }
 
 }
+
 
 
 
