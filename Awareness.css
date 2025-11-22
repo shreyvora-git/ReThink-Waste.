@@ -102,7 +102,7 @@ img {
     left: 200px;
     scale: 1.6;
     transition: transform 0.3s ease;
-    z-index: 3; 
+    z-index: 99999; 
 }
 img:hover {
     transform: scale(1.1);
@@ -365,4 +365,5 @@ footer {
     .page-hero {
         padding-top: 20px; 
     }
+
 }
